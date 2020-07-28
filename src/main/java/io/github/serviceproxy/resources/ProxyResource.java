@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package io.github.dropwizard.serviceproxy.resources;
+package io.github.serviceproxy.resources;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
 import com.codahale.metrics.annotation.Metered;
 import com.codahale.metrics.annotation.Timed;
 import io.dropwizard.jersey.PATCH;
-import io.github.dropwizard.serviceproxy.models.RequestMethod;
-import io.github.dropwizard.serviceproxy.processors.ProxyProcessor;
+import io.github.serviceproxy.models.RequestMethod;
+import io.github.serviceproxy.processors.ProxyProcessor;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.inject.Singleton;
@@ -33,6 +33,7 @@ import javax.ws.rs.core.UriInfo;
 
 @Slf4j
 @Singleton
+@Path("")
 public class ProxyResource {
 
     private ProxyProcessor proxyProcessor;

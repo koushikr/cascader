@@ -13,21 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.dropwizard.serviceproxy;
+package io.github.serviceproxy.config;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import io.dropwizard.Configuration;
-import io.github.dropwizard.serviceproxy.config.ProxyConfiguration;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import org.junit.Assert;
+import org.junit.Test;
 
-@Getter
-@Setter
-@JsonIgnoreProperties(ignoreUnknown = true)
-@EqualsAndHashCode(callSuper = true)
-public class AppConfiguration extends Configuration {
+/**
+ * @author koushik
+ */
+public class ProxyConfigTest {
 
-    private ProxyConfiguration proxy;
+    @Test
+    public void testDefaultValuesForConfig(){
+        ProxyConfiguration configuration = new ProxyConfiguration();
 
+        Assert.assertEquals(configuration.getConnections(), 10);
+        Assert.assertEquals(configuration.getConnectionTimeoutMs(), 10000);
+        Assert.assertEquals(configuration.getIdleTimeoutSeconds(), 30);
+        Assert.assertEquals(configuration.getOperationTimeoutMs(), 10000);
+    }
 }

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package io.github.dropwizard.serviceproxy.processors;
+package io.github.serviceproxy.processors;
 
 import com.codahale.metrics.MetricRegistry;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Strings;
 import io.appform.core.hystrix.CommandFactory;
-import io.github.dropwizard.serviceproxy.config.ProxyConfiguration;
-import io.github.dropwizard.serviceproxy.models.RequestMethod;
-import io.github.dropwizard.serviceproxy.utils.OkhttpUtils;
+import io.github.serviceproxy.config.ProxyConfiguration;
+import io.github.serviceproxy.models.RequestMethod;
+import io.github.serviceproxy.utils.OkhttpUtils;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;

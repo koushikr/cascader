@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.dropwizard.serviceproxy.utils;
+package io.github.serviceproxy.utils;
 
 import com.codahale.metrics.MetricRegistry;
 import com.raskasa.metrics.okhttp.InstrumentedOkHttpClients;
-import io.github.dropwizard.serviceproxy.config.ProxyConfiguration;
+import io.github.serviceproxy.config.ProxyConfiguration;
 import okhttp3.*;
 
 import java.io.IOException;

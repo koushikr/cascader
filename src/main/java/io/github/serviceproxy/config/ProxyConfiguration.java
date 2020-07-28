@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.dropwizard.serviceproxy.config;
+package io.github.serviceproxy.config;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.hystrix.configurator.config.HystrixConfig;

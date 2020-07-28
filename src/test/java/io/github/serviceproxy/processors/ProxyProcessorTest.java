@@ -1,6 +1,6 @@
-package io.github.dropwizard.serviceproxy.processors;
+package io.github.serviceproxy.processors;
 
-import io.github.dropwizard.serviceproxy.config.ProxyConfiguration;
+import io.github.serviceproxy.config.ProxyConfiguration;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

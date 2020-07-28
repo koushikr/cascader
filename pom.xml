@@ -2,7 +2,7 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.dropwizard</groupId>
+    <groupId>io.github.serviceproxy</groupId>
     <artifactId>serviceproxy</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
@@ -105,7 +105,7 @@
         <dependency>
             <groupId>com.raskasa.metrics</groupId>
             <artifactId>metrics-okhttp</artifactId>
-            <version>0.5.3-PP</version>
+            <version>0.4.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.dropwizard.metrics</groupId>
@@ -122,7 +122,7 @@
         <dependency>
             <groupId>io.appform.core</groupId>
             <artifactId>hystrix-function-wrapper</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.1.4</version>
         </dependency>
         <dependency>
             <groupId>org.zapodot</groupId>
@@ -135,11 +135,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>com.hystrix</groupId>
-            <artifactId>hystrix-configurator</artifactId>
-            <version>0.0.5</version>
-        </dependency>
+
 
         <!-- Text Utils -->
         <dependency>
@@ -205,7 +201,6 @@
               <artifactId>sonar-maven-plugin</artifactId>
               <version>${sonar.version}</version>
           </plugin>
-
 
       </plugins>
   </build>

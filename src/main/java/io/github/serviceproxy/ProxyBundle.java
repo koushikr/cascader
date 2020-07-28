@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.github.dropwizard.serviceproxy;
+package io.github.serviceproxy;
 
 import com.codahale.metrics.MetricRegistry;
 import com.hystrix.configurator.core.HystrixConfigurationFactory;
@@ -21,9 +21,9 @@ import io.dropwizard.Configuration;
 import io.dropwizard.ConfiguredBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import io.github.dropwizard.serviceproxy.config.ProxyConfiguration;
-import io.github.dropwizard.serviceproxy.processors.ProxyProcessor;
-import io.github.dropwizard.serviceproxy.resources.ProxyResource;
+import io.github.serviceproxy.config.ProxyConfiguration;
+import io.github.serviceproxy.processors.ProxyProcessor;
+import io.github.serviceproxy.resources.ProxyResource;
 import lombok.val;
 
 public abstract class ProxyBundle<T extends Configuration> implements ConfiguredBundle<T> {
@@ -39,13 +39,13 @@ public abstract class ProxyBundle<T extends Configuration> implements Configured
         val metricRegistry = getRegistry(configuration);
 
         //Initialize the proxyProcessor
-        val proxyProcessor = new ProxyProcessor(proxyConfiguration, metricRegistry);
+        ProxyProcessor proxyProcessor = new ProxyProcessor(proxyConfiguration, metricRegistry);
+
+        //Register the resource
+        environment.jersey().register(new ProxyResource(proxyProcessor));
 
         //Initialize hystrix
         HystrixConfigurationFactory.init(proxyConfiguration.getHystrix());
-        
-        //Register the resource
-        environment.jersey().register(new ProxyResource(proxyProcessor));
     }
 
     @Override
