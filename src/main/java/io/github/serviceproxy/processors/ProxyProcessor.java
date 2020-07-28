@@ -175,9 +175,11 @@ public class ProxyProcessor {
         Preconditions.checkNotNull(okHttpClient);
 
         Request request = getRequest(requestMethod, httpHeaders, url(path, uriInfo), body);
+        val name = uriInfo.getBaseUri() != null ? uriInfo.getBaseUri().toString() : "default";
+
         try {
             val response = CommandFactory.<okhttp3.Response>create(
-                    uriInfo.getBaseUri().toString(), "process", null
+                    name, "process", null
             ).executor(() -> okHttpClient.newCall(request).execute()).execute();
             String responseString = OkhttpUtils.bodyString(response);
             return Response
