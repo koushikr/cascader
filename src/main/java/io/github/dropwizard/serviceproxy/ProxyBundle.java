@@ -43,7 +43,7 @@ public abstract class ProxyBundle<T extends Configuration> implements Configured
 
         //Initialize hystrix
         HystrixConfigurationFactory.init(proxyConfiguration.getHystrix());
-
+        
         //Register the resource
         environment.jersey().register(new ProxyResource(proxyProcessor));
     }

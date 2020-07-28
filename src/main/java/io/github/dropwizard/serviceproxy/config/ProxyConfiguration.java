@@ -54,4 +54,17 @@ public class ProxyConfiguration {
 
     @Valid
     private HystrixConfig hystrix = new HystrixConfig();
+
+    @Builder
+    public ProxyConfiguration(String host, int port, String scheme){
+        this.name = "DEFAULT";
+        this.host = host;
+        this.port = port;
+        this.scheme = scheme;
+        this.connections = 10;
+        this.idleTimeoutSeconds = 30;
+        this.connectionTimeoutMs = 10000;
+        this.operationTimeoutMs = 10000;
+        this.hystrix = new HystrixConfig();
+    }
 }

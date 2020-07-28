@@ -23,6 +23,7 @@ import io.appform.core.hystrix.CommandFactory;
 import io.github.dropwizard.serviceproxy.config.ProxyConfiguration;
 import io.github.dropwizard.serviceproxy.models.RequestMethod;
 import io.github.dropwizard.serviceproxy.utils.OkhttpUtils;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import okhttp3.*;
@@ -36,6 +37,7 @@ import java.util.Objects;
 
 @Singleton
 @Slf4j
+@Getter
 public class ProxyProcessor {
 
     private final ProxyConfiguration proxyConfiguration;
