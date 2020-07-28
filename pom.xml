@@ -39,6 +39,9 @@
         <junit.version>4.12</junit.version>
         <mockito.version>2.9.0</mockito.version>
         <cglib.version>3.2.5</cglib.version>
+        <okhttp.version>3.14.2</okhttp.version>
+        <commons.text.version>1.4</commons.text.version>
+        <dropwizard.swagger.version>1.0.0-1</dropwizard.swagger.version>
 
         <!--Jacoco properties-->
         <jacoco.version>0.8.0</jacoco.version>
@@ -91,6 +94,66 @@
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
             <version>0.9.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.raskasa.metrics</groupId>
+            <artifactId>metrics-okhttp</artifactId>
+            <version>0.5.3-PP</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.dropwizard.metrics</groupId>
+                    <artifactId>metrics-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>okhttp</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Hystrix -->
+        <dependency>
+            <groupId>io.appform.core</groupId>
+            <artifactId>hystrix-function-wrapper</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.zapodot</groupId>
+            <artifactId>hystrix-dropwizard-bundle</artifactId>
+            <version>0.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.dropwizard</groupId>
+                    <artifactId>dropwizard-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.hystrix</groupId>
+            <artifactId>hystrix-configurator</artifactId>
+            <version>0.0.5</version>
+        </dependency>
+
+        <!-- Text Utils -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>${commons.text.version}</version>
+        </dependency>
+
+        <!-- Swagger -->
+        <dependency>
+            <groupId>com.smoketurner</groupId>
+            <artifactId>dropwizard-swagger</artifactId>
+            <version>${dropwizard.swagger.version}</version>
         </dependency>
 
     </dependencies>
