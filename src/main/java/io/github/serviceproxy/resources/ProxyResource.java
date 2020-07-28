@@ -44,7 +44,6 @@ public class ProxyResource {
 
     @HEAD
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response head(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo) throws Exception {
@@ -59,7 +58,6 @@ public class ProxyResource {
 
     @GET
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response get(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo) throws Exception {
@@ -75,7 +73,6 @@ public class ProxyResource {
 
     @POST
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response post(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo, byte[] body) throws Exception {
@@ -90,7 +87,6 @@ public class ProxyResource {
 
     @PUT
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response put(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo, byte[] body) throws Exception {
@@ -105,7 +101,6 @@ public class ProxyResource {
 
     @OPTIONS
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response options(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo, byte[] body) throws Exception {
@@ -120,7 +115,6 @@ public class ProxyResource {
 
     @PATCH
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response patch(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo, byte[] body) throws Exception {
@@ -135,7 +129,6 @@ public class ProxyResource {
 
     @DELETE
     @Path(value = "/{path: .*}")
-    @Metered
     @ExceptionMetered
     @Timed
     public Response delete(@PathParam("path") String path, @Context HttpHeaders httpHeaders, @Context UriInfo uriInfo) throws Exception {
