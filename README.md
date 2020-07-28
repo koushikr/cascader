@@ -6,23 +6,7 @@ A dropwizard bundle to act like a proxy in front of any http web server.
 > - Moby- Dick, Herman Melville
 
 
-### Maven Dependency
-Use the following repository:
-```xml
-<repository>
-    <id>clojars</id>
-    <name>Clojars repository</name>
-    <url>https://clojars.org/repo</url>
-</repository>
-```
-Use the following maven dependency:
-```xml
-<dependency>
-    <groupId>io.github.serviceproxy</groupId>
-    <artifactId>serviceproxy</artifactId>
-    <version>0.0.1</version>
-</dependency>
-```
+
 
 ### Build instructions
   - Clone the source:
