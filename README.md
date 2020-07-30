@@ -1,4 +1,4 @@
-# Service Proxy [![Travis build status](https://travis-ci.org/koushikr/qtrouper.svg?branch=master)](https://travis-ci.org/koushikr/dropwizard-serviceproxy)
+# Service Proxy [![Travis build status](https://travis-ci.org/koushikr/dropwizard-serviceproxy.svg?branch=master)](https://travis-ci.org/koushikr/dropwizard-serviceproxy)
 
 A dropwizard bundle to act like a proxy in front of any http web server.
 
