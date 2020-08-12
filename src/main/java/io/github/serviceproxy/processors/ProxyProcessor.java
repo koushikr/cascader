@@ -177,7 +177,7 @@ public class ProxyProcessor {
         Request request = getRequest(requestMethod, httpHeaders, url(path, uriInfo), body);
         val name = uriInfo.getBaseUri() != null ? uriInfo.getBaseUri().toString() : "default";
 
-        log.info("Proxying the request to url {} with method {}", request.url().encodedPath(), requestMethod);
+        log.debug("Proxying the request to host {}, url {} with method {}", request.url().host(), request.url().encodedPath(), requestMethod);
 
         try {
             val response = CommandFactory.<okhttp3.Response>create(
