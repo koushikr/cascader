@@ -20,7 +20,7 @@ Use the following maven dependency:
 <dependency>
     <groupId>io.github.serviceproxy</groupId>
     <artifactId>serviceproxy</artifactId>
-    <version>0.0.1-3</version>
+    <version>0.0.1-4</version>
 </dependency>
 ```
 
