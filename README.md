@@ -64,7 +64,7 @@ static class SampleConfiguration extends Configuration{
                 }
       };
 
-      bootstrap.addBundle(trouperBundle);
+      bootstrap.addBundle(proxyBundle);
 
 ```
 
