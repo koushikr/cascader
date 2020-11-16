@@ -23,6 +23,7 @@ import io.appform.core.hystrix.CommandFactory;
 import io.github.serviceproxy.config.ProxyConfiguration;
 import io.github.serviceproxy.models.RequestMethod;
 import io.github.serviceproxy.utils.OkhttpUtils;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -43,6 +44,7 @@ public class ProxyProcessor {
     private final ProxyConfiguration proxyConfiguration;
     private final OkHttpClient okHttpClient;
 
+    @Builder
     public ProxyProcessor(ProxyConfiguration proxyConfiguration,
                           MetricRegistry metricRegistry){
         this.proxyConfiguration = proxyConfiguration;

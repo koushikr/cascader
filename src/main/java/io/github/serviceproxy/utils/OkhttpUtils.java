@@ -27,7 +27,7 @@ public class OkhttpUtils {
 
     public static String bodyString(Response response) throws IOException {
         try(final ResponseBody body = response.body()) {
-            return body.string();
+            return null != body ? body.string() : null;
         }
     }
 

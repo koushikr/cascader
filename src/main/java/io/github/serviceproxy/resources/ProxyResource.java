@@ -17,7 +17,6 @@
 package io.github.serviceproxy.resources;
 
 import com.codahale.metrics.annotation.ExceptionMetered;
-import com.codahale.metrics.annotation.Metered;
 import com.codahale.metrics.annotation.Timed;
 import io.dropwizard.jersey.PATCH;
 import io.github.serviceproxy.models.RequestMethod;

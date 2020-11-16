@@ -39,7 +39,10 @@ public abstract class ProxyBundle<T extends Configuration> implements Configured
         val metricRegistry = getRegistry(configuration);
 
         //Initialize the proxyProcessor
-        ProxyProcessor proxyProcessor = new ProxyProcessor(proxyConfiguration, metricRegistry);
+        ProxyProcessor proxyProcessor = ProxyProcessor.builder()
+                .proxyConfiguration(proxyConfiguration)
+                .metricRegistry(metricRegistry)
+                .build();
 
         //Register the resource
         environment.jersey().register(new ProxyResource(proxyProcessor));
